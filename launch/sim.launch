@@ -1,0 +1,17 @@
+<launch>
+
+	<node pkg="rosbag" type="record" name="record" output="screen"
+		args="record -O /home/pworsnop/catkin_ws/src/kalman/bagfiles/test -a"/>
+
+  <node name="measurements" pkg="kalman" type="measurements" />
+
+  <node name="ref" pkg="kalman" type="ref" />
+
+  <node name="meas1" pkg="kalman" type="meas1" />
+
+  <node name="meas2" pkg="kalman" type="meas2" />
+
+  <node name="meas3" pkg="kalman" type="meas3" />
+
+
+</launch>

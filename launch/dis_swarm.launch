@@ -1,0 +1,15 @@
+<launch>
+
+	<machine name="drone1" address="agent1" user="pworsnop" env-loader="/opt/ros/indigo/env.sh"/>
+
+	<machine name="drone2" address="agent1" user="pworsnop" env-loader="/opt/ros/indigo/env.sh"/>
+
+	<machine name="drone3" address="agent1" user="pworsnop" env-loader="/opt/ros/indigo/env.sh"/>
+
+  <node machine="drone1" name="agent1" pkg="kalman" type="agent1" />
+
+  <node machine="drone2" name="agent2" pkg="kalman" type="agent2" />
+
+  <node machine="drone3" name="agent3" pkg="kalman" type="agent3" />
+
+</launch>
